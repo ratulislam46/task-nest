@@ -5,11 +5,12 @@ import Home from "../Home/Home";
 import AddTask from "../Task/AddTask";
 import BrowseTask from "../Page/BrowseTask/BrowseTask";
 import MyPostedTask from "../Page/MyPosted/MyPostedTask";
+import TaskDetails from "../Page/BrowseTask/TaskDetails";
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        Component:Layout,
+        Component: Layout,
         children: [
             {
                 index: true,
@@ -21,9 +22,14 @@ export const router = createBrowserRouter([
                 Component: AddTask
             },
             {
-                path:'/browseTask',
+                path: '/browseTask',
                 Component: BrowseTask,
-                loader: ()=>fetch('http://localhost:3000/addtask')
+                loader: () => fetch('http://localhost:3000/addtask')
+            },
+            {
+                path:'/addtask/:id',
+                Component:TaskDetails,
+                loader: ({params})=>fetch(`http://localhost:3000/addtask/${params.id}`)
             },
             {
                 path: '/myPostedTask',
@@ -32,7 +38,7 @@ export const router = createBrowserRouter([
         ]
     },
     {
-    path: '/*',
-    Component: Error
+        path: '/*',
+        Component: Error
     }
 ]);
