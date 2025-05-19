@@ -22,7 +22,8 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/browseTask',
-                Component: BrowseTask
+                Component: BrowseTask,
+                loader: ()=>fetch('http://localhost:3000/addtask')
             },
             {
                 path: '/myPostedTask',
