@@ -7,7 +7,7 @@ const Task = ({ task }) => {
 
     return (
         <div>
-            <div className="card bg-[#fb6376] card-md shadow-sm">
+            <div className="card bg-[#fb6376] hover:bg-[#fb6376] hover:-mt-2 card-md shadow-sm">
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p>{description}</p>

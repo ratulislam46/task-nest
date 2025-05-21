@@ -29,6 +29,7 @@ const AddTask = () => {
                 }
                 console.log('after added', data);
             })
+            
     }
 
     return (
@@ -39,31 +40,31 @@ const AddTask = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <fieldset className="fieldset">
                             <label className="label">Name</label>
-                            <input type="text" name='name' className="input" placeholder="Name" />
+                            <input type="text" name='name' className="input" placeholder="Name" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" />
+                            <input type="email" name='email' className="input" placeholder="Email" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Task Title</label>
-                            <input type="text" name='title' className="input" placeholder="Title" />
+                            <input type="text" name='title' className="input" placeholder="Title" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Deadline</label>
-                            <input type="date" name='deadline' className="input" placeholder="Deadline" />
+                            <input type="date" name='deadline' className="input" placeholder="Deadline" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Budget</label>
-                            <input type="text" name='budget' className="input" placeholder="Budget" />
+                            <input type="text" name='budget' className="input" placeholder="Budget" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Description</label>
-                            <input type="text" name='description' className="input" placeholder="Description . . ." />
+                            <input type="text" name='description' className="input" placeholder="Description . . ." required />
                         </fieldset>
                         <fieldset className='border border-gray-300 rounded-md px-2 py-3'>
                             <label className='label'>Category:</label>
-                            <select name='category'>
+                            <select name='category' required>
                                 <option>Developer</option>
                                 <option>UI/UX Designer</option>
                                 <option>Writing</option>
