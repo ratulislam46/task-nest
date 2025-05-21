@@ -21,11 +21,11 @@ const UpdateTask = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <fieldset className="fieldset">
                             <label className="label">Name</label>
-                            <input type="text" defaultValue={name} name='name' className="input" placeholder="Name" />
+                            <input type="text" defaultValue={name} name='name' className="input" placeholder="Name" disabled />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" defaultValue={email} name='email' className="input" placeholder="Email" />
+                            <input type="email" defaultValue={email} name='email' className="input" placeholder="Email" disabled />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Task Title</label>
