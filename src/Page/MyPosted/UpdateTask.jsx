@@ -1,22 +1,52 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
+import Swal from 'sweetalert2';
 
 const UpdateTask = () => {
 
-    const data = useLoaderData();
-    console.log(data);
-    const { _id, title, name, email, deadline, category, description, budget } = data;
+    const initialInfo = useLoaderData();
+
+    const { _id, title, name, email, deadline, category, description, budget } = initialInfo
 
 
     const hanleUpdate = (e) => {
         e.preventDefault()
-        console.log('update'); 
+        console.log('clicked update');
+
+        const title = e.target.title.value;
+        const deadline = e.target.deadline.value;
+        const category = e.target.category.value;
+        const description = e.target.description.value;
+        const budget = e.target.budget.value;
+        console.log(title);
+
+        const updateValue = {
+            _id, title, deadline, category, description, budget
+        }
+
+        fetch('http://localhost:3000/addtask', {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateValue)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('after update', data);
+                Swal.fire({
+                    title: "Update your task!",
+                    icon: "success",
+                    draggable: true
+                });
+            })
+
     }
 
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <div className="card bg-base-100 border px-8 py-8">
-                <form>
+                <form onSubmit={hanleUpdate}>
                     <h1 className='text-center font-semibold mb-6 border-b pb-4 border-red-50'>Update Task info</h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <fieldset className="fieldset">
@@ -54,7 +84,7 @@ const UpdateTask = () => {
                             </select>
                         </fieldset>
                     </div>
-                    <input onClick={hanleUpdate} type="submit" value="Update" className='w-full my-6 btn btn-accent hover:text-white' />
+                    <input type="submit" value="Update" className='w-full my-6 btn btn-accent hover:text-white' />
                 </form>
             </div>
         </div>
