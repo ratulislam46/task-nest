@@ -7,6 +7,8 @@ import BrowseTask from "../Page/BrowseTask/BrowseTask";
 import MyPostedTask from "../Page/MyPosted/MyPostedTask";
 import TaskDetails from "../Page/BrowseTask/TaskDetails";
 import UpdateTask from "../Page/MyPosted/UpdateTask";
+import Login from "../auth/Login/Login";
+import LogOut from "../auth/LogOut/LogOut";
 
 
 export const router = createBrowserRouter([
@@ -35,7 +37,7 @@ export const router = createBrowserRouter([
             {
                 path: '/myPostedTask',
                 Component: MyPostedTask,
-                loader: ()=>fetch('http://localhost:3000/addtask')
+                loader: () => fetch('http://localhost:3000/addtask')
             },
             {
                 path: '/updateTask/:id',
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
                 Component: UpdateTask
             }
         ]
+    },
+    {
+        path: '/login',
+        Component: Login
+    },
+    {
+        path: '/logout',
+        Component: LogOut
     },
     {
         path: '/*',

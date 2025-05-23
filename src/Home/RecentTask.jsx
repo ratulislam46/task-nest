@@ -4,7 +4,7 @@ import { TbCurrencyTaka } from 'react-icons/tb';
 
 const RecentTask = ({ task }) => {
 
-    console.log(task);
+    // console.log(task);
     const { budget, category, deadline, description, email, name, title, _id } = task;
 
     return (
