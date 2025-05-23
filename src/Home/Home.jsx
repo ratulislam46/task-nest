@@ -20,7 +20,7 @@ const Home = () => {
             <section className='w-11/12 mx-auto'>
                 <AllTask></AllTask>
             </section>
-            <section className='w-11/12 mx-auto'>
+            <section >
                 <Package></Package>
             </section>
             <section className='w-11/12 mx-auto'>
