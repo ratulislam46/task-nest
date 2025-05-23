@@ -1,11 +1,12 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../auth/AuthProvider/AuthProver';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
 
-    const {name} = use(AuthContext);
-    // console.log(name);
+    const { user, LogOut } = use(AuthContext);
+    // console.log(user);
 
     const links =
         <>
@@ -14,6 +15,17 @@ const Navbar = () => {
             <li><NavLink to='/browseTask'>Browse Task</NavLink></li>
             <li><NavLink to='/myPostedTask'>My Posted Task</NavLink></li>
         </>
+
+
+const handleLogOut = () =>{
+    LogOut()
+    .then(()=>{
+        toast.success('Logout succefully')
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+}
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -42,8 +54,22 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
+
             <div className="navbar-end">
-                <Link to='/login' className='btn'>Login</Link>
+                <div>
+                    {
+                        user ? user?.photoURL ?
+                            <img src={user.photoURL} className={`h-[40px] rounded-2xl mr-2 hover:${user.email}`}></img> :
+                            <p className='mr-2 text-white font-semibold text-xl'>{user.email}</p>
+                            : " "
+                    }
+                </div>
+                {
+                    user ?
+                        <button onClick={handleLogOut} className='btn'>Log Out</button> :
+                        <Link to='/login' className='btn'>Login</Link>
+                }
+
             </div>
         </div>
     );
