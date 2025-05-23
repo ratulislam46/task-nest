@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Navbar from '../../Components/Navbar/Navbar';
 import { AuthContext } from '../AuthProvider/AuthProver';
 import toast from 'react-hot-toast';
@@ -8,7 +8,7 @@ const Login = () => {
 
     const { Login, CreateWithGoogle } = use(AuthContext)
 
-
+    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -21,6 +21,7 @@ const Login = () => {
         Login(email, password)
             .then((result) => {
                 toast.success('Login successfully');
+                navigate(`${location.state ? location.state : '/'}`)
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -34,7 +35,8 @@ const Login = () => {
         CreateWithGoogle()
             .then((result) => {
                 const user = result.user;
-                console.log('after login with google');
+                toast.success("Login successfully")
+                navigate(`${location.state ? location.state : '/'}`)
             })
             .catch((error) => {
                 const errorCode = error.code;

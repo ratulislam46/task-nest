@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { use } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../auth/AuthProvider/AuthProver';
 
 const AddTask = () => {
+
+    const {user} = use(AuthContext);
+    console.log(user);
+    console.log(user.email);
 
     const handleAddTask = (e) => {
         e.preventDefault()
@@ -44,7 +49,7 @@ const AddTask = () => {
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" required />
+                            <input type="email" name='email' defaultValue={user.email} disabled  className="input" placeholder="Email" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Task Title</label>

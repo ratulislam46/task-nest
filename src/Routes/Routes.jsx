@@ -9,6 +9,8 @@ import TaskDetails from "../Page/BrowseTask/TaskDetails";
 import UpdateTask from "../Page/MyPosted/UpdateTask";
 import Login from "../auth/Login/Login";
 import LogOut from "../auth/LogOut/LogOut";
+import Loading from '../Page/Loading/Loading'
+import PrivateRouter from "../PrivetRouter/PrivateRouter";
 
 
 export const router = createBrowserRouter([
@@ -22,27 +24,37 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/addtask',
-                Component: AddTask
+                element: <PrivateRouter>
+                    <AddTask></AddTask>
+                </PrivateRouter>
             },
             {
                 path: '/browseTask',
                 Component: BrowseTask,
-                loader: () => fetch('http://localhost:3000/addtask')
+                loader: () => fetch('http://localhost:3000/addtask'),
+                HydrateFallback: Loading
             },
             {
                 path: '/addtask/:id',
-                Component: TaskDetails,
-                loader: ({ params }) => fetch(`http://localhost:3000/addtask/${params.id}`)
+                element: <PrivateRouter>
+                    <TaskDetails></TaskDetails>
+                </PrivateRouter>,
+                loader: ({ params }) => fetch(`http://localhost:3000/addtask/${params.id}`),
+                HydrateFallback: Loading
             },
             {
                 path: '/myPostedTask',
-                Component: MyPostedTask,
-                loader: () => fetch('http://localhost:3000/addtask')
+                element: <PrivateRouter>
+                    <MyPostedTask></MyPostedTask>
+                </PrivateRouter>,
+                loader: () => fetch('http://localhost:3000/addtask'),
+                HydrateFallback: Loading
             },
             {
                 path: '/updateTask/:id',
                 loader: ({ params }) => fetch(`http://localhost:3000/addtask/${params.id}`),
-                Component: UpdateTask
+                Component: UpdateTask,
+                HydrateFallback: Loading
             }
         ]
     },

@@ -18,6 +18,23 @@ const LogOut = () => {
         console.log(name, email, password, photo);
 
 
+        // password varified 
+        if (password.length < 5) {
+            toast.error('Password must be 6 character')
+            return;
+        }
+        const uppercaseRegex = /[A-Z]/;
+        if (!uppercaseRegex.test(password)) {
+            toast.error('Password must be one uppercase letter');
+            return;
+        }
+        const lowercaseRegex = /[a-z]/;
+        if (!lowercaseRegex.test(password)) {
+            toast.error('Password must be one lowercase letter');
+            return;
+        }
+
+
         // createAcount in firebase 
         Register(email, password)
             .then((result) => {

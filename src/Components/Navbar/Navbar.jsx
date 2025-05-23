@@ -66,7 +66,7 @@ const handleLogOut = () =>{
                 </div>
                 {
                     user ?
-                        <button onClick={handleLogOut} className='btn'>Log Out</button> :
+                        <button onClick={handleLogOut} className='btn'>Log out</button> :
                         <Link to='/login' className='btn'>Login</Link>
                 }
 
