@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "title": "Standard Plan",
+        "description": "Budget-friendly and user-friendly, ideal for individuals and small businesses seeking essential features for online presence.",
+        "money": "11",
+        "duration": "Package duration",
+        "task_number": "Number of task to post",
+        "featured": "Featured task",
+        "plan": "Task plans allowed",
+        "credits": "Credits to apply on projects",
+        "featured_task": "Featured task duration",
+        "duration1": "1 Month",
+        "task_number1": "5 Tasks",
+        "featured1": "2 Allowed",
+        "credits1": "10 Credits",
+        "featured_task1": "5 days"
+    },
+    {
+        "id": 2,
+        "title": "Economy Plan",
+        "description": "Tailored for growth the Professional Package offers advanced features, scalability, and priority support 24/7.",
+        "money": "55",
+        "duration": "Package duration",
+        "task_number": "Number of task to post",
+        "featured": "Featured task",
+        "plan": "Task plans allowed",
+        "credits": "Credits to apply on projects",
+        "featured_task": "Featured task duration",
+        "duration1": "3 Month",
+        "task_number1": "10 Tasks",
+        "featured1": "3 Allowed",
+        "credits1": "55 Credits",
+        "featured_task1": "10 days"
+    },
+    {
+        "id": 3,
+        "title": "Extended Plan",
+        "description": "Ultimate for large organizations, offering cutting-edge tech, dedicated support, and advanced security features.",
+        "money": "100",
+        "duration": "Package duration",
+        "task_number": "Number of task to post",
+        "featured": "Featured task",
+        "plan": "Task plans allowed",
+        "credits": "Credits to apply on projects",
+        "featured_task": "Featured task duration",
+        "duration1": "1 Year",
+        "task_number1": "50 Tasks",
+        "featured1": "20 Allowed",
+        "credits1": "99 Credits",
+        "featured_task1": "30 days"
+    }
+]

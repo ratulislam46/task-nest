@@ -10,7 +10,7 @@ const BrowseTask = () => {
     // console.log(allTask);
 
     return (
-        <div className='mt-14 mb-12'>
+        <div className='mt-14 mb-12 w-11/12 mx-auto'>
             <h1 className='text-2xl md:text-3xl lg:text-5xl text-center mb-14'>Browse 
                 All Task </h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

@@ -25,7 +25,7 @@ const RecentTask = ({ task }) => {
                     </li>
                      <p className=' text-gray-500 border border-blue-300 py-4 px-2 rounded-md'>Describtion : {description}</p>
                    <div className='flex justify-between mx-1'>
-                    <h1>Post: {name}</h1>
+                    <h1>Post: <span className='font-bold text-md'>{name}</span></h1>
                     <h1 className='font-semibold flex items-center'><TbCurrencyTaka size={16} /><span className='font-bold text-green-600'>{budget}</span></h1>
                    </div>
                 </ul>

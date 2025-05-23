@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -43,9 +44,12 @@ const Footer = () => {
                             Social
                         </span>
                         <div className="flex items-center mt-1 space-x-3">
-                            <FaLinkedin size={24}></FaLinkedin>
-                            <FaInstagram size={24}></FaInstagram>
-                            <FaFacebook size={24}></FaFacebook>
+                            <Link to='/'><FaLinkedin size={24}></FaLinkedin></Link>
+                            
+                            <Link to='https://www.instagram.com/arfan_ratul_46/' target='_blank'><FaInstagram size={24}></FaInstagram></Link>
+                            
+                            <Link to='https://web.facebook.com/mdratul.islam.46' target='_blank'><FaFacebook size={24}></FaFacebook></Link>
+                            
                         </div>
                     </div>
                 </div>

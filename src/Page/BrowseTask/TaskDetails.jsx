@@ -8,7 +8,7 @@ const TaskDetails = () => {
 
 
     return (
-        <div className='my-20 border rounded-md flex justify-between items-center px-5 lg:px-10 py-10'>
+        <div className='my-20 border border-gray-400 rounded-md flex justify-between items-center px-5 lg:px-10 py-10 w-11/12 mx-auto bg-gray-100'>
             <div className='space-y-4'>
                 <h1 className='text-xl font-serif'>{name}</h1>
                 <h1 className='text-xl font-serif -mt-4 border-b-2 border-b-cyan-950 pb-2'>{email}</h1>
