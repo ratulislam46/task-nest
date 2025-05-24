@@ -17,7 +17,7 @@ const AllTask = () => {
 
     return (
         <div className='my-14'>
-            <h1 className='text-4xl lg:text-5xl font-semibold text-center pb-4 '>Recently posted tasks</h1>
+            <h1 className='text-4xl lg:text-5xl font-semibold text-center pb-4 dark:text-white '>Recently posted tasks</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
                 {
                     tasks.map(task=><RecentTask key={task._id} task={task}></RecentTask>)

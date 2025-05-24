@@ -17,15 +17,16 @@ const Navbar = () => {
         </>
 
 
-const handleLogOut = () =>{
-    LogOut()
-    .then(()=>{
-        toast.success('Logout succefully')
-    })
-    .catch((error)=>{
-        console.log(error);
-    })
-}
+    const handleLogOut = () => {
+        LogOut()
+            .then(() => {
+                toast.success('Logout succefully')
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -55,14 +56,12 @@ const handleLogOut = () =>{
                 </ul>
             </div>
 
-            
-
             <div className="navbar-end">
                 <div>
                     {
                         user ? user?.photoURL ?
                             <img src={user.photoURL} className={`h-[40px] rounded-2xl mr-2 hover:${user.email}`}></img> :
-                            <p className='mr-2 text-white font-semibold text-xl'>{user.email}</p>
+                            <p className='mr-2 font-semibold text-xl'>{user.email}</p>
                             : " "
                     }
                 </div>

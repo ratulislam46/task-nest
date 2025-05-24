@@ -6,8 +6,8 @@ const Talk = () => {
         <div className='lg:flex justify-between items-center my-24'>
             <div className=' space-y-5'>
                 <h3 className='text-xl text-amber-500 font-semibold'>Talk to support</h3>
-                <h1 className='text-2xl md:text-3xl lg:text-5xl font-semibold -mt-4'>Frequently asked questiions</h1>
-                <p className='text-gray-500'>Find answers to your questions instantly. Need more guidance? Dive into our extensive documentation for all your queries.</p>
+                <h1 className='text-2xl md:text-3xl lg:text-5xl font-semibold -mt-4 dark:text-white '>Frequently asked questiions</h1>
+                <p className='text-gray-500 dark:text-white '>Find answers to your questions instantly. Need more guidance? Dive into our extensive documentation for all your queries.</p>
                 <Link to='/'><button className='btn bg-amber-400 px-6 md:px-8 lg:px-10 p rounded'>Contact Our Team</button></Link>
             </div>
 

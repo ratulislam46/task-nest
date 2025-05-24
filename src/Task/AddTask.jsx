@@ -5,8 +5,8 @@ import { AuthContext } from '../auth/AuthProvider/AuthProver';
 const AddTask = () => {
 
     const {user} = use(AuthContext);
-    console.log(user);
-    console.log(user.email);
+    // console.log(user);
+    // console.log(user.email);
 
     const handleAddTask = (e) => {
         e.preventDefault()
