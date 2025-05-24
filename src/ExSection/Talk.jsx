@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Talk = () => {
     return (
-        <div className='lg:flex justify-between my-24'>
+        <div className='lg:flex justify-between items-center my-24'>
             <div className=' space-y-5'>
                 <h3 className='text-xl text-amber-500 font-semibold'>Talk to support</h3>
                 <h1 className='text-2xl md:text-3xl lg:text-5xl font-semibold -mt-4'>Frequently asked questiions</h1>

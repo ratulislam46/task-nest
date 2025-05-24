@@ -26,7 +26,6 @@ const Home = () => {
             <section className='w-11/12 mx-auto'>
                 <Talk></Talk>
             </section>
-
         </div>
     );
 };

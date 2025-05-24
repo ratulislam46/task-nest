@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineCheck } from 'react-icons/ai';
 
 const PlanBox = ({ singlePlan }) => {
     // console.log(singlePlan);
@@ -6,7 +7,7 @@ const PlanBox = ({ singlePlan }) => {
     const { credits, credits1, description, duration, duration1, featured, featured1, featured_task, featured_task1, money, plan, task_number, task_number1, title } = singlePlan;
 
     return (
-        <div className='px-10 lg:px-8 py-4 bg-white border border-gray-100 hover:border-amber-300 rounded-xl shadow-xl mt-16 hover:border'>
+        <div className='px-10 lg:px-8 pt-8 pb-4 bg-white border border-gray-100 hover:border-amber-300 rounded-xl shadow-xl mt-16 hover:border'>
             <div className='space-y-2'>
                 <h3 className='card-title'>{title}</h3>
                 <p className='text-gray-500'>{description}</p>
@@ -32,7 +33,7 @@ const PlanBox = ({ singlePlan }) => {
                 </div>
                 <div className='flex justify-between'>
                     <p className='text-gray-600'>{plan}</p>
-                    <p className='text-gray-600'>right</p>
+                    <p className='text-gray-600'><AiOutlineCheck className='text-green-500' /></p>
                 </div>
                 <div className='flex justify-between'>
                     <p className='text-gray-600'>{credits}</p>
