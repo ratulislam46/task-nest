@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
             {
                 path: '/browseTask',
                 Component: BrowseTask,
-                loader: () => fetch('http://localhost:3000/addtask'),
+                loader: () => fetch('https://tasknest-server-six.vercel.app/addtask'),
                 HydrateFallback: Loading
             },
             {
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRouter>
                     <TaskDetails></TaskDetails>
                 </PrivateRouter>,
-                loader: ({ params }) => fetch(`http://localhost:3000/addtask/${params.id}`),
+                loader: ({ params }) => fetch(`https://tasknest-server-six.vercel.app/addtask/${params.id}`),
                 HydrateFallback: Loading
             },
             {
@@ -47,12 +47,12 @@ export const router = createBrowserRouter([
                 element: <PrivateRouter>
                     <MyPostedTask></MyPostedTask>
                 </PrivateRouter>,
-                loader: () => fetch('http://localhost:3000/addtask'),
+                loader: () => fetch('https://tasknest-server-six.vercel.app/addtask'),
                 HydrateFallback: Loading
             },
             {
                 path: '/updateTask/:id',
-                loader: ({ params }) => fetch(`http://localhost:3000/addtask/${params.id}`),
+                loader: ({ params }) => fetch(`https://tasknest-server-six.vercel.app/addtask/${params.id}`),
                 Component: UpdateTask,
                 HydrateFallback: Loading
             }

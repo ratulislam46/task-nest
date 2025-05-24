@@ -7,7 +7,7 @@ const AllTask = () => {
     // console.log(tasks);
 
     useEffect(() => {
-        fetch('http://localhost:3000/addtask')
+        fetch('https://tasknest-server-six.vercel.app/addtask')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

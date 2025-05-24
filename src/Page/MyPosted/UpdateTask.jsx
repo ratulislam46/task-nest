@@ -24,7 +24,7 @@ const UpdateTask = () => {
             _id, title, deadline, category, description, budget
         }
 
-        fetch('http://localhost:3000/addtask', {
+        fetch('https://tasknest-server-six.vercel.app/addtask', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -51,11 +51,11 @@ const UpdateTask = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <fieldset className="fieldset">
                             <label className="label">Name</label>
-                            <input type="text" defaultValue={name} name='name' className="input" placeholder="Name" disabled />
+                            <input type="text" defaultValue={name} name='name' className="input input-warning" placeholder="Name" readOnly />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" defaultValue={email} name='email' className="input" placeholder="Email" disabled />
+                            <input type="email" defaultValue={email} name='email' className="input input-warning" placeholder="Email" readOnly />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Task Title</label>

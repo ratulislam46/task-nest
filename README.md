@@ -13,3 +13,5 @@
 
 - Informative Footer with links and contact details
 
+- use react-simple-typewriter in project title
+

@@ -16,7 +16,7 @@ const AddTask = () => {
         const allValue = Object.fromEntries(formData.entries())
         console.log(allValue);
 
-        fetch('http://localhost:3000/addtask', {
+        fetch('https://tasknest-server-six.vercel.app/addtask', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const AddTask = () => {
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" name='email' defaultValue={user.email} disabled  className="input" placeholder="Email" required />
+                            <input type="email" name='email' defaultValue={user.email} readOnly  className="input" placeholder="Email" required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <label className="label">Task Title</label>

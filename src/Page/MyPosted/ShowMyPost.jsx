@@ -4,7 +4,9 @@ import Swal from 'sweetalert2';
 
 const ShowMyPost = ({ myPost, setTasks, tasks }) => {
 
-    const { _id, title, name, email, deadline, category, description, budget } = myPost
+
+    const { _id, title, deadline, description } = myPost;
+
 
     const handleDeleteTask = (id) => {
         // console.log('delete', id);
@@ -20,7 +22,7 @@ const ShowMyPost = ({ myPost, setTasks, tasks }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/addtask/${id}`, {
+                fetch(`https://tasknest-server-six.vercel.app/addtask/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -32,15 +34,15 @@ const ShowMyPost = ({ myPost, setTasks, tasks }) => {
                             icon: "success"
                         });
                     })
-                    const remainingTask = tasks.filter(task=>task._id !== id)
-                    setTasks(remainingTask)
+                const remainingTask = tasks.filter(task => task._id !== id)
+                setTasks(remainingTask)
             }
         });
 
     }
 
     return (
-        <div className="card bg-gray-300">
+        <div className="card bg-[#fb6376] hover:bg-[#fb6376]">
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{title}</h2>
                 <p>{deadline}</p>
