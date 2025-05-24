@@ -14,7 +14,7 @@ const TaskDetails = () => {
     return (
         <div className='w-11/12 mx-auto my-20 '>
 
-            <p className='font-semibold text-2xl'>You bid {bids} task</p>
+            <p className='font-semibold text-2xl dark:text-white'>You bid {bids} task</p>
 
             <div className='mt-6 border border-gray-400 rounded-md flex justify-between items-center px-5 lg:px-10 py-10 bg-gray-100'>
                 <div className='space-y-4'>
